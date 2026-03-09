@@ -8,7 +8,7 @@ const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
 const CLI = '0xwork';
 const WORK_DIR = '/tmp/0xwork-users';
 const API_PROXY = 'https://smartcodedbot.com/api/0xwork';
-const OWNER_ID = '5262757684'; // SmartCoded
+const OWNER_ID = process.env.OWNER_ID || '';
 
 // User tracking
 const userSessions = {};
@@ -987,7 +987,7 @@ bot.command('xmtp', async (ctx) => {
   const msg = `📬 *XMTP Integration*\n\n` +
     `You can receive 0xWork alerts via XMTP DM!\n\n` +
     `🔗 *Bot's XMTP Address:*\n` +
-    `\`0x96cf99B416846945650209676c4D99D2A8EC41e6\`\n\n` +
+    `\`YOUR_XMTP_ADDRESS\`\n\n` +
     `_Coming soon: Connect your wallet to receive alerts via XMTP DM_`;
   
   await ctx.reply(msg, { parse_mode: 'Markdown', reply_markup: mainMenu(ctx) });
