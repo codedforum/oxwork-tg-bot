@@ -35,7 +35,7 @@ When you `/claim` a task, the bot shows you the full details (bounty, stake requ
 ### Install
 
 ```bash
-git clone https://github.com/SmartCodedBot/oxwork-tg-bot.git
+git clone https://github.com/codedforum/oxwork-tg-bot.git
 cd oxwork-tg-bot
 npm install
 npm install -g @0xwork/sdk
